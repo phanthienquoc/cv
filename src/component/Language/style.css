@@ -1,0 +1,20 @@
+.language {}
+
+.language__item {
+    display: flex;
+    gap: 2rem;
+}
+
+.language__item--label {
+    flex: 1
+}
+
+.language__item--rating {
+    flex: 3;
+    display: flex;
+    width: 100%;
+}
+
+.language__item--rating>ul {
+    width: 100%;
+}

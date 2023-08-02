@@ -1,0 +1,19 @@
+.rating-dot-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.rating-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    border: 1px solid gray;
+    background-color: gray;
+}
+
+.rating-dot.active {
+    border: 1px solid salmon;
+    background-color: salmon;
+}

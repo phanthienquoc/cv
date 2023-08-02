@@ -1,0 +1,28 @@
+@import url("../main.css");
+
+@media screen and (max-width:768px) {
+    main {
+        gap: 2rem !important
+    }
+
+    aside {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .company-history__label {
+        flex-direction: column;
+    }
+
+    .company-history__working-project .working-project__left {
+        display: none;
+    }
+
+    .aside-mobile {
+        display: initial;
+    }
+}

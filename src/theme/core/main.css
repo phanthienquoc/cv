@@ -1,0 +1,40 @@
+main {
+    min-height: 100vh;
+    flex: 3;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    flex: 1
+}
+
+strong {
+    font-family: Poppins SemiBold;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.header__image {
+    height: 6rem;
+    width: 6rem;
+    min-width: 6rem;
+    min-height: 6rem;
+    border-radius: 6rem;
+    overflow: hidden;
+
+    margin-right: 3rem;
+}
+
+.aside-mobile {
+    display: none;
+}
