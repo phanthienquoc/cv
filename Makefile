@@ -12,36 +12,34 @@ SERVER_RUN="npm run dev"
 
 
 build:
- $(DOCKER_COMPOSE) up --build --no-recreate -d
+	$(DOCKER_COMPOSE) up --build --no-recreate -d
 
 
 install:
- $(DOCKER_EXEC_TOOLS_APP) -c $(NODE_INSTALL)
+	$(DOCKER_EXEC_TOOLS_APP) -c $(NODE_INSTALL)
 
 
 dev:
- $(DOCKER_EXEC_TOOLS_APP) -c $(SERVER_RUN)
+	$(DOCKER_EXEC_TOOLS_APP) -c $(SERVER_RUN)
 
 
 up:
- $(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) up -d
 
 
 start: up dev
-// this will up the docker env and run the npm run dev it to
-
 
 first: build install dev
-// this will build the env, up it and run the npm install and then run npm run dev it to
+
+# stop: 
+# 	$(ROOT_DIR)/docker-compose.yml
+#  	$(DOCKER_COMPOSE) kill || true
+#  	$(DOCKER_COMPOSE) rm --force || true
 
 
-stop: $(ROOT_DIR)/docker-compose.yml
- $(DOCKER_COMPOSE) kill || true
- $(DOCKER_COMPOSE) rm --force || true
+# restart: stop start dev
 
 
-restart: stop start dev
-
-
-clear: stop $(ROOT_DIR)/docker-compose.yml
- $(DOCKER_COMPOSE) down -v --remove-orphans || true
+# clear: 
+# 	stop $(ROOT_DIR)/docker-compose.yml
+# 	$(DOCKER_COMPOSE) down -v --remove-orphans || true
